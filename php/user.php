@@ -1,4 +1,5 @@
 <?php
+session_start();
 require '../vendor/autoload.php';
 
 $valueFromUserJs = isset($_POST['cups']) ? $_POST['cups'] : "sin datos recibidos";
@@ -26,7 +27,7 @@ switch ($tipoConsulta) {
     };
 
     $soloCupsEncode = json_encode($soloCups);
-    
+
     break;
   case "cups":
     $pointerContracs = $connContracts->find(

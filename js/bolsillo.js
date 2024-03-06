@@ -9,7 +9,7 @@ $(function () {
 
 		let allDataFromBolsillo = JSON.parse(msg);
 		let contracts = allDataFromBolsillo;
-		let $bolsilloSelect = $('#bolsilloSelect');
+		let $bolsilloSelect = $('#selectContratos');
 
 
 		// datos del select principal
@@ -23,12 +23,12 @@ $(function () {
 		});
 	});
 
-	$("#bolsilloSelect").change(function () {
+	$("#selectContratos").change(function () {
 		selectChange();
 	});
 
 	function selectChange() { // show info in principal select
-		var valor = $('#bolsilloSelect').val();
+		var valor = $('#selectContratos').val();
 
 		$.ajax({
 			method: "POST",
@@ -42,7 +42,7 @@ $(function () {
 
 			let allDataFromBolsillo = JSON.parse(msg);
 			let contracts = allDataFromBolsillo;
-			let $bolsilloSelect = $('#bolsilloSelect');
+			let $bolsilloSelect = $('#selectContratos');
 			let $codigoAmigo = $('.codigoAmigo');
 			let codigoAmigo = contracts["codigoAmigo"];
 

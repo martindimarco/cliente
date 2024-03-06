@@ -9,7 +9,7 @@ $(function () {
 
 		let allDataFromUser = JSON.parse(msg);
 		let contracts = allDataFromUser;
-		let $dropdown = $('#selectUser');
+		let $dropdown = $('#selectContratos');
 
 		// datos del select principal
 		$.each(contracts, function () {
@@ -20,13 +20,15 @@ $(function () {
 		});
 	});
 
-	$("#selectUser").change(function () {
+
+
+	$("#selectContratos").change(function () {
 		selectChange();
 	});
 
 
 	function selectChange() {
-		var valor = $('#selectUser').val();
+		var valor = $('#selectContratos').val();
 
 
 		$.ajax({
@@ -43,7 +45,7 @@ $(function () {
 			let contracts = allDataFromUser;
 
 
-			$cups = $('#selectUser').val();
+			$cups = $('#selectContratos').val();
 			$datosCups_rojo = $('#datosCups_rojo');
 
 			console.log($cups);

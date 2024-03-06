@@ -11,18 +11,15 @@
   <link rel="stylesheet" href="./css/driverPopover.css">
 
   <!-- import google icons -->
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
 
   <!-- import google fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@100&family=Teko:wght@300&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@100&family=Teko:wght@300&display=swap" rel="stylesheet">
 
   <!-- import bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
   <!-- import bootstrap icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
@@ -37,9 +34,7 @@
   <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 
   <!-- import scr bootstrap -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
   <!-- import driver.js -->
   <script src="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.js.iife.js"></script>
@@ -54,103 +49,8 @@
 </head>
 
 <body>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-2">
-        <!-- logoCliente, zona para poner los banner de los mismos -->
-        <img src="./assets/img/aire.png" alt="Logo Aire" width="100" class="mt-1">
-      </div>
-      <!-- iconos de user, help and logout -->
-      <div class="col-10 mt-1">
-        <div class="d-flex justify-content-end">
-          <a class="btAccount btnDelNav" href="#" target="_self">
-            <span class="material-symbols-outlined h3 mt-1" id="tuto" onclick="iniciarTour()">
-              smart_display
-            </span>
-          </a>
-          <a class="btAccount btnDelNav" href="facturas.html" target="_self">
-            <span class="material-symbols-outlined h3 mt-1">
-              draft_orders
-            </span>
-          </a>
-          <a class="btAccount btnDelNav" href="user.html" target="_self">
-            <span class="material-symbols-outlined h3 mt-1 userBtn-activado">Account_Circle</span>
-          </a>
-          <a class="btAccount btnDelNav" href="bolsillo.html" target="_self">
-            <span class="material-symbols-outlined h3 mt-1" id="bolsillo">beenhere</span>
-          </a>
-          <a class="btAccount btnDelNav" href="./assets/pdf/manual.pdf" target="_blank">
-            <span class="material-symbols-outlined h3 mt-1">
-              developer_guide
-            </span>
-          </a>
-          <a class="btExit btnDelNav" href="./php/destroySession.php" target="_self">
-            <span class="material-symbols-outlined h3 mt-1">move_item</span>
-          </a>
-          <!-- START HAMBURGUER BUTTON ///////////////////////////////////////////////////////////////////////////////////////////////// -->
-          <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
-            aria-controls="offcanvasRight" id="btnBurger" style="background-color: transparent; border: none;">
-            <span class="material-symbols-outlined" style="color: rgb(49, 49, 49); font-size: 34px;">
-              menu
-            </span>
-          </button>
-          <!-- END HAMBURGUER BUTTON ///////////////////////////////////////////////////////////////////////////////////////////////// -->
-        </div>
-      </div>
-      <!-- START HAMBURGUER CONTENT ///////////////////////////////////////////////////////////////////////////////////////////////// -->
+  <?php include('./partials/nav.php');      ?>
 
-      <div class="offcanvas offcanvas-end offcanvas-size" tabindex="-1" id="offcanvasRight"
-        aria-labelledby="offcanvasRightLabel">
-        <div class="offcanvas-header">
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body offcanvas-bd-size">
-          <h3 class="text-white">Menu</h3>
-          <div class="col-10 mt-1">
-            <div class="container justify-content-end">
-              <div class="row">
-                <a class="btAccountBurguer menuBurgerTexto" href="#" target="_self">
-                  <spam class="tamañoBotonesBurgerNav" id="tuto" onclick="iniciarTour()">Tutorial</spam>
-                </a>
-                <a class="btAccountBurguer menuBurgerTexto" href="index.html" targeibant="_self">
-                  <spam class="tamañoBotonesBurgerNav" id="facturas">Mis Facturas</spam>
-                </a>
-                <a class="btAccountBurguer menuBurgerTexto" href="user.html" target="_self">
-                  <spam class="tamañoBotonesBurgerNav" id="datos">Mis Contratos</spam>
-                </a>
-                <a class="btAccountBurguer menuBurgerTexto" href="bolsillo.html" target="_self">
-                  <spam class="tamañoBotonesBurgerNav" id="bolsillo">Bolsillo Solar</spam>
-                </a>
-                <a class="btAccountBurguer menuBurgerTexto" href="./assets/pdf/manual.pdf" target="_blank">
-                  <spam class="tamañoBotonesBurgerNav" id="manual">Documentacion</spam>
-                </a>
-                <hr class="mt-3" style="border-color: white;">
-                <a class="btExitBurguer menuBurgerTexto" href="login.html" target="_self">
-                  <spam class="tamañoBotonesBurgerNav">Salir</spam>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- END HAMBURGUER CONTENT ///////////////////////////////////////////////////////////////////////////////////////////////// -->
-    </div>
-  </div>
-
-  <nav class="navbar navbar-expand-lg navbar-light bg-dark justify-content-between">
-    <!-- este div se usa para situar un espacio en blanco y desplazar asi 'datos personales y de contratacion'  -->
-    <!-- <div></div> -->
-    <!-- DEPRECATED by Joaquin 20/12/2023 -->
-    <!-- <div class="teraLogoBorderUser"><a href="index.html" class="navbar-brand text-light mt-2 teraLogoUser">TERA</a></div> -->
-    <ul class="navbar-nav text-center">
-      <li class="nav-item active">
-        <button class="btn btn-black text-light btn-sm border border-0 fs-6" type="button">
-          <strong>Datos Personales y de contratacion</strong>
-        </button>
-      </li>
-    </ul>
-  </nav>
   <div class="container-fluid  mt-2">
     <div class="row justify-content-between g-3">
       <!-- area de "ultima conexion" -->
@@ -162,22 +62,18 @@
             <!-- CARD CAMBIO DE CONTRASEÑA START -->
             <div class="card shadow-sm mt-1">
               <div class="card-body" id="cambioPass">
-                <input type="text" class="form-control form-control-sm" id="exampleFormControlInput1" disabled
-                  value="47675883B">
-                <input type="password" class="form-control form-control-sm mt-2" id="exampleFormControlInput2" disabled
-                  value="123456789">
+                <input type="text" class="form-control form-control-sm" id="exampleFormControlInput1" disabled value="47675883B">
+                <input type="password" class="form-control form-control-sm mt-2" id="exampleFormControlInput2" disabled value="123456789">
 
                 <!-- DISPARADOR MODAL CAMBIO DE CONTRASEÑA -->
                 <div class="d-grid">
-                  <button href="#" class="btn btn-dark btn-sm mt-2" data-bs-toggle="modal"
-                    data-bs-target="#cambioClaveModal">
+                  <button href="#" class="btn btn-dark btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#cambioClaveModal">
                     Cambiar la contraseña
                   </button>
                 </div>
 
                 <!-- MODAL CONTENT CAMBIO DE CONTRASEÑA START -->
-                <div class="modal fade" id="cambioClaveModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                  aria-hidden="true">
+                <div class="modal fade" id="cambioClaveModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                   <div class="modal-dialog">
                     <div class="modal-content">
                       <div class="modal-header">
@@ -186,8 +82,7 @@
                         </h1>
                       </div>
                       <div class="modal-body">
-                        <input type="password" class="form-control form-control-sm mt-1" id="exampleFormControlInput3"
-                          placeholder="5646464646464654">
+                        <input type="password" class="form-control form-control-sm mt-1" id="exampleFormControlInput3" placeholder="5646464646464654">
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">
@@ -216,8 +111,7 @@
                     <span class="input-group-text input-group-sm" id="basic-addon1">
                       <i class="bi bi-person-vcard"></i>
                     </span>
-                    <input id="userUssNameDP" type="text" class="form-control form-control-sm" aria-label="Username"
-                      aria-describedby="basic-addon1">
+                    <input id="userUssNameDP" type="text" class="form-control form-control-sm" aria-label="Username" aria-describedby="basic-addon1">
                   </div>
                 </div>
                 <div class="col-sm-5">
@@ -225,8 +119,7 @@
                     <span class="input-group-text" id="basic-addon1">
                       <i class="bi bi-telephone"></i>
                     </span>
-                    <input id="userTlfDP" type="tel" class="form-control form-control-sm" aria-label="tel"
-                      aria-describedby="basic-addon1">
+                    <input id="userTlfDP" type="tel" class="form-control form-control-sm" aria-label="tel" aria-describedby="basic-addon1">
                   </div>
                 </div>
               </div>
@@ -236,8 +129,7 @@
                     <span class="input-group-text" id="basic-addon1">
                       <i class="bi bi-person"></i>
                     </span>
-                    <input id="userNameDP" type="text" class="form-control form-control-sm" aria-label="name"
-                      aria-describedby="basic-addon1">
+                    <input id="userNameDP" type="text" class="form-control form-control-sm" aria-label="name" aria-describedby="basic-addon1">
                   </div>
                 </div>
                 <div class="col-sm-7">
@@ -248,8 +140,7 @@
                     <span class="input-group-text" id="basic-addon1">
                       <i class="bi bi-clock-history"></i>
                     </span>
-                    <input id="userHorarioPreferenteDP" type="text" class="form-control"
-                      placeholder="Horario Preferente" aria-label="name" aria-describedby="basic-addon1">
+                    <input id="userHorarioPreferenteDP" type="text" class="form-control" placeholder="Horario Preferente" aria-label="name" aria-describedby="basic-addon1">
                   </div>
                 </div>
                 <div class="d-grid">
@@ -278,8 +169,7 @@
               </div>
 
               <!-- HISTORY NODAL CONTENT -->
-              <div class="modal fade" id="historyModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
+              <div class="modal fade" id="historyModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-lg">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -287,13 +177,11 @@
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                      <select id="selectModalContratos" class="form-select" aria-label="Default select example"
-                        onchange="estadoSelect()">
+                      <select id="selectModalContratos" class="form-select" aria-label="Default select example" onchange="estadoSelect()">
                         <option selected disabled>Contratos</option>
                       </select>
                       <br>
-                      <select id="cabeceraDelMensaje" class="form-select" aria-label="Default select example"
-                        onchange="estadoSelect()">
+                      <select id="cabeceraDelMensaje" class="form-select" aria-label="Default select example" onchange="estadoSelect()">
                         <option selected disabled>Mensaje</option>
                       </select>
 
@@ -330,8 +218,7 @@
 
                 <!-- DISPARADOR MODAL TICKET -->
                 <div class="col">
-                  <a href="#" class="btn btn-danger btn-sm px-4 d-grid mt-2" data-bs-toggle="modal"
-                    data-bs-target="#ticketModal">Ticket</a>
+                  <a href="#" class="btn btn-danger btn-sm px-4 d-grid mt-2" data-bs-toggle="modal" data-bs-target="#ticketModal">Ticket</a>
                 </div>
               </div>
             </div>
@@ -348,15 +235,13 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                  <select id="selectModalContratos" class="form-select" aria-label="Default select example"
-                    onchange="estadoSelect()">
+                  <select id="selectModalContratos" class="form-select" aria-label="Default select example" onchange="estadoSelect()">
                     <option selected disabled>Contratos</option>
                     <option value="1">ES0031104331972008FN0F Aire</option>
                     <option value="2">ES0031104331972008FN0F Aire 2</option>
                   </select>
                   <br>
-                  <select id="selectModal" class="form-select" aria-label="Default select example"
-                    onchange="estadoSelect()">
+                  <select id="selectModal" class="form-select" aria-label="Default select example" onchange="estadoSelect()">
                     <option selected disabled>Seleccione un motivo</option>
                     <option value="1">Reclamacion de factura</option>
                     <option value="2">Modificacion de contador</option>
@@ -383,13 +268,11 @@
                       <option value>Otros</option>
                     </select>
                     <br>
-                    <textarea name="informacionExtra" id="informacionExtra" cols="60" rows="5"
-                      placeholder="Porfavor detalle la consulta" class="form-control table responsive"></textarea>
+                    <textarea name="informacionExtra" id="informacionExtra" cols="60" rows="5" placeholder="Porfavor detalle la consulta" class="form-control table responsive"></textarea>
                   </div>
                   <!-- modificacion de contador -->
                   <div id="state2" style="display: none">
-                    <textarea name="informacionExtra" id="informacionExtra" cols="60" rows="5"
-                      placeholder="Porfavor detalle la consulta" class="form-control table responsive"></textarea>
+                    <textarea name="informacionExtra" id="informacionExtra" cols="60" rows="5" placeholder="Porfavor detalle la consulta" class="form-control table responsive"></textarea>
                     <br>
                     <div class="my-3">
                       <input class="form-control form-control-sm" id="formFileSm" type="file">
@@ -401,14 +284,11 @@
                       <div class="card-body my-0">
                         <span class="card-title" style="color: grey; font-size: 20px;">Descarga el formulario</span>
                         <br>
-                        <a href="./assets/pdf/manual.pdf" style="text-decoration: none; font-weight: bold;"
-                          target="_blank"><span class="material-symbols-outlined"
-                            style="font-size: 32px; margin-top: 15px;">download</span></a>
+                        <a href="./assets/pdf/manual.pdf" style="text-decoration: none; font-weight: bold;" target="_blank"><span class="material-symbols-outlined" style="font-size: 32px; margin-top: 15px;">download</span></a>
                       </div>
                     </div>
                     <br>
-                    <textarea name="informacionExtra" id="informacionExtra" cols="60" rows="5"
-                      placeholder="Porfavor detalle la consulta" class="form-control  table responsive"></textarea>
+                    <textarea name="informacionExtra" id="informacionExtra" cols="60" rows="5" placeholder="Porfavor detalle la consulta" class="form-control  table responsive"></textarea>
                     <div class="my-3">
                       <input class="form-control form-control-sm" id="formFileSm" type="file">
                     </div>
@@ -421,14 +301,11 @@
                           el
                           formulario</span>
                         <br>
-                        <a href="./assets/pdf/manual.pdf" style="text-decoration: none; font-weight: bold;"
-                          target="_blank"><span class="material-symbols-outlined"
-                            style="font-size: 32px; margin-top: 15px;">download</span></a>
+                        <a href="./assets/pdf/manual.pdf" style="text-decoration: none; font-weight: bold;" target="_blank"><span class="material-symbols-outlined" style="font-size: 32px; margin-top: 15px;">download</span></a>
                       </div>
                     </div>
                     <br>
-                    <textarea name="informacionExtra" id="informacionExtra" cols="60" rows="5"
-                      placeholder="Porfavor detalle la consulta" class="form-control  table responsive"></textarea>
+                    <textarea name="informacionExtra" id="informacionExtra" cols="60" rows="5" placeholder="Porfavor detalle la consulta" class="form-control  table responsive"></textarea>
                     <div class="my-3">
                       <input class="form-control form-control-sm" id="formFileSm" type="file">
                     </div>
@@ -441,30 +318,25 @@
                           el
                           formulario</span>
                         <br>
-                        <a href="./assets/pdf/manual.pdf" style="text-decoration: none; font-weight: bold;"
-                          target="_blank"><span class="material-symbols-outlined"
-                            style="font-size: 32px; margin-top: 15px;">download</span></a>
+                        <a href="./assets/pdf/manual.pdf" style="text-decoration: none; font-weight: bold;" target="_blank"><span class="material-symbols-outlined" style="font-size: 32px; margin-top: 15px;">download</span></a>
                       </div>
                     </div>
                     <br>
-                    <textarea name="informacionExtra" id="informacionExtra" cols="60" rows="5"
-                      placeholder="Porfavor detalle la consulta" class="form-control  table responsive"></textarea>
+                    <textarea name="informacionExtra" id="informacionExtra" cols="60" rows="5" placeholder="Porfavor detalle la consulta" class="form-control  table responsive"></textarea>
                     <div class="my-3">
                       <input class="form-control form-control-sm" id="formFileSm" type="file">
                     </div>
                   </div>
                   <!-- activacion autoconsumo -->
                   <div id="state6" style="display: none">
-                    <textarea name="informacionExtra" id="informacionExtra" cols="60" rows="5"
-                      placeholder="Porfavor detalle la consulta" class="form-control table responsive"></textarea>
+                    <textarea name="informacionExtra" id="informacionExtra" cols="60" rows="5" placeholder="Porfavor detalle la consulta" class="form-control table responsive"></textarea>
                     <div class="my-3">
                       <input class="form-control form-control-sm" id="formFileSm" type="file">
                     </div>
                   </div>
                   <!-- otros -->
                   <div id="state7" style="display: block">
-                    <textarea name="informacionExtra" id="informacionExtra" cols="60" rows="5"
-                      placeholder="Porfavor detalle la consulta" class="form-control table responsive"></textarea>
+                    <textarea name="informacionExtra" id="informacionExtra" cols="60" rows="5" placeholder="Porfavor detalle la consulta" class="form-control table responsive"></textarea>
                     <div class="my-3">
                       <input class="form-control form-control-sm" id="formFileSm" type="file">
                     </div>
@@ -490,12 +362,11 @@
         <div class="row">
           <div class="col-12 mb-1">
             <!-- ZONA DEL SELECT DE CONTRATOS -->
-            <select class="form-select form-select-sm" aria-label="Small select example" name="contratos"
-              id="selectUser">
+            <!-- <select class="form-select form-select-sm" aria-label="Small select example" name="contratos" id="selectUser">
               <option selected class="custom-select">CONTRATOS</option>
-
               </option>
-            </select>
+            </select> -->
+            <?php   include('./partials/select.php');  ?>
             <!-- FIN ZONA DEL SELECT DE CONTRATOS -->
           </div>
         </div>
@@ -719,19 +590,14 @@
   </div>
 
   <!-- import jquery -->
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
   <!-- import driver.js -->
   <script src="./js/tourUser.js"></script>
 
   <!-- import bootstrap -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 
   <!-- import js -->
   <script src="./js/user.js"></script>

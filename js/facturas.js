@@ -62,7 +62,7 @@ $('document').ready(function () {
 			let invoices_ext = allDataFromIndex.invoices_ext;
 
 			// capturo el id del select y lo meto en una variable
-			let $dropdown = $("#selectContratosIndex");
+			let $dropdown = $("#selectContratos");
 
 			// uso index para poder concatenar y acceder a invoices_ext o cualquier otra collection
 			$.each(contracts, function () {
@@ -74,12 +74,12 @@ $('document').ready(function () {
 		});
 	}
 
-	$("#selectContratosIndex").change(function () {
+	$("#selectContratos").change(function () {
 		selectChange();
 	});
 
 	function selectChange() {
-		var valores = $('#selectContratosIndex').val().split('@')
+		var valores = $('#selectContratos').val().split('@')
 		var valor = valores[0];
 		var marca = valores[1];
 		var cif = valores[2];

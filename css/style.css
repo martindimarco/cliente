@@ -92,15 +92,18 @@ th {
 }
 
 /* botones nav */
-.indexBtn-activado {
+.activo {
+	color: teal !important;
+}
+.factura_activo {
 	color: teal !important;
 }
 
-.userBtn-activado {
+.user_activo {
 	color: teal !important;
 }
 
-.bolsilloBtn-activado {
+.bolsillo_activo {
 	color: teal !important;
 }
 

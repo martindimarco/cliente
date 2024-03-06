@@ -12,21 +12,16 @@
   <link rel="stylesheet" href="./css/driverPopover.css">
 
   <!-- import google icons -->
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
   <!-- import google fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@100&family=Teko:wght@300&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@100&family=Teko:wght@300&display=swap" rel="stylesheet">
 
   <!-- import bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
 
   <!-- import chart.js -->
@@ -49,103 +44,18 @@
   <script defer src="./js/dataTable/bolsilloData_excedentres.js"></script>
 
   <!-- dataTable -->
-<link rel="stylesheet" href="https://cdn.datatables.net/1.13.8/css/dataTables.bootstrap5.min.css">
-<script defer src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js"></script>
-<script defer src="https://cdn.datatables.net/1.13.8/js/dataTables.bootstrap5.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.8/css/dataTables.bootstrap5.min.css">
+  <script defer src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js"></script>
+  <script defer src="https://cdn.datatables.net/1.13.8/js/dataTables.bootstrap5.min.js"></script>
 
   <title>Bolsillo</title>
 
 </head>
 
 <body>
+  <?php include('./partials/nav.php');      ?>
 
 
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-2">
-        <!-- logoCliente, zona para poner los banner de los mismos -->
-        <img src="./assets/img/aire.png" alt="Logo Aire" width="100" class="mt-1" />
-      </div>
-      <!-- iconos de user, help and logout NOTA: lleva un !important en css -->
-      <div class="col-10 mt-1">
-        <div class="d-flex justify-content-end">
-          <a class="btAccount btnDelNav" href="#" target="_self"><span class="material-symbols-outlined h3 mt-1"
-              id="tuto" onclick="iniciarTour()">
-              smart_display
-            </span></a>
-          <a class="btAccount btnDelNav" href="facturas.html" target="_self"><span
-              class="material-symbols-outlined h3 mt-1" id="facturas">
-              draft_orders
-            </span></a>
-          <a class="btAccount btnDelNav" href="user.html" target="_self"><span class="material-symbols-outlined h3 mt-1"
-              id="datos">Account_Circle</span></a>
-          <a class="btAccount btnDelNav" href="bolsillo.html" target="_self"><span
-              class="material-symbols-outlined h3 mt-1 bolsilloBtn bolsilloBtn-activado"
-              id="bolsillo">beenhere</span></a>
-          <a class="btAccount btnDelNav" href="./assets/pdf/manual.pdf" target="_blank"><span
-              class="material-symbols-outlined h3 mt-1" id="manual">developer_guide
-            </span></a>
-          <a class="btExit btnDelNav" href="./php/destroySession.php" target="_self"><span
-              class="material-symbols-outlined h3 mt-1">move_item</span></a>
-
-          <!-- START HAMBURGUER BUTTON ///////////////////////////////////////////////////////////////////////////////////////////////// -->
-          <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
-            aria-controls="offcanvasRight" id="btnBurger" style="background-color: transparent; border: none;">
-            <span class="material-symbols-outlined" style="color: rgb(49, 49, 49); font-size: 34px;">
-              menu
-            </span>
-          </button>
-          <!-- END HAMBURGUER BUTTON ///////////////////////////////////////////////////////////////////////////////////////////////// -->
-        </div>
-      </div>
-
-      <!-- START HAMBURGUER CONTENT ///////////////////////////////////////////////////////////////////////////////////////////////// -->
-
-      <div class="offcanvas offcanvas-end offcanvas-size" tabindex="-1" id="offcanvasRight"
-        aria-labelledby="offcanvasRightLabel">
-        <div class="offcanvas-header">
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body offcanvas-bd-size">
-          <h3 class="text-white">Menu</h3>
-          <div class="col-10 mt-1">
-            <div class="container justify-content-end">
-              <div class="row">
-                <a class="btAccountBurguer menuBurgerTexto" href="#" target="_self">
-                  <spam class="tamañoBotonesBurgerNav" id="tuto" onclick="iniciarTour()">Tutorial</spam>
-                </a>
-                <a class="btAccountBurguer menuBurgerTexto" href="facturas.html" target="_self">
-                  <spam class="tamañoBotonesBurgerNav" id="facturas">Mis Facturas</spam>
-                </a>
-                <a class="btAccountBurguer menuBurgerTexto" href="user.html" target="_self">
-                  <spam class="tamañoBotonesBurgerNav" id="datos">Mis Contratos</spam>
-                </a>
-                <a class="btAccountBurguer menuBurgerTexto" href="bolsillo.html" target="_self">
-                  <spam class="tamañoBotonesBurgerNav" id="bolsillo ">Bolsillo Solar</spam>
-                </a>
-                <a class="btAccountBurguer menuBurgerTexto" href="./assets/pdf/manual.pdf" target="_blank">
-                  <spam class="tamañoBotonesBurgerNav" id="manual">Documentacion</spam>
-                </a>
-                <hr class="mt-3" style="border-color: white;">
-                <a class="btExitBurguer menuBurgerTexto" href="login.html" target="_self">
-                  <spam class="tamañoBotonesBurgerNav">Salir</spam>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- END HAMBURGUER CONTENT ///////////////////////////////////////////////////////////////////////////////////////////////// -->
-    </div>
-  </div>
-  <nav class="navbar navbar-expand-lg navbar-light bg-dark justify-content-between">
-    <div class="d-flex align-items-center p-1">
-      <div>
-        <strong class="bolsilloNav m-1" id="b1">Bolsillo Solar</strong>
-      </div>
-    </div>
-  </nav>
 
   <main class="tour_main">
     <div class="container-fluid mt-1 px-0 px-lg-2">
@@ -158,10 +68,10 @@
                   <strong>Ultima conexion:</strong><span class="lastConnection"></span>
                 </div>
                 <div class="col-12 col-lg-8 my-0 px-0 px-lg-2">
-                  <select class="form-select form-select-sm" aria-label="Small select example" name="direcciones"
-                    id="bolsilloSelect">
+                  <!-- <select class="form-select form-select-sm" aria-label="Small select example" name="direcciones" id="bolsilloSelect">
                     <option value="" style="font-weight: bold;"><strong>CONTRATOS</strong></option>
-                  </select>
+                  </select> -->
+                  <?php   include('./partials/select.php');  ?>
                 </div>
               </div>
             </div>
@@ -174,26 +84,20 @@
                     <div class="container-fluid px-3 mt-2">
                       <ul class="nav nav-tabs row tour_bolsillo_Exedentes" id="myTab" role="tablist">
                         <li class="nav-item col-auto px-0 mx-0" role="presentation">
-                          <button class="nav-link active btnBolsillo" id="home-tab" data-bs-toggle="tab"
-                            data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane"
-                            aria-selected="true">Bolsillo</button>
+                          <button class="nav-link active btnBolsillo" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Bolsillo</button>
                         </li>
                         <li class="nav-item col px-0 mx-1" role="presentation">
-                          <button class="nav-link btnExcedentes" id="profile-tab" data-bs-toggle="tab"
-                            data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane"
-                            aria-selected="false">Excedentes</button>
+                          <button class="nav-link btnExcedentes" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Excedentes</button>
                         </li>
                         <li class="nav-item col-auto col-auto" role="presentation">
                           <!-- dispara MODAL -->
-                          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#infoModal"
-                            type="button"><span class="material-symbols-outlined tour_info">info</span></button>
+                          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#infoModal" type="button"><span class="material-symbols-outlined tour_info">info</span></button>
                         </li>
                       </ul>
                     </div>
 
                     <!-- VENTANA INFORMACION MODAL -->
-                    <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                      aria-hidden="true">
+                    <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                       <div class="modal-dialog ">
                         <div class="modal-content">
                           <div class="modal-header bg-info bg-gradient">
@@ -205,28 +109,23 @@
                               <label for class="fs-6">
                                 <span class="datosGenerales">CUPS</span>
                               </label>
-                              <input type="text" disabled class="form-control form-control-sm mt-1"
-                                id="bolsilloModalCups">
+                              <input type="text" disabled class="form-control form-control-sm mt-1" id="bolsilloModalCups">
                               <label for class="fs-6 mt-3">
                                 <span class="datosGenerales">Direccion</span>
                               </label>
-                              <input type="text" disabled class="form-control form-control-sm mt-1"
-                                id="bolsilloModalAddress">
+                              <input type="text" disabled class="form-control form-control-sm mt-1" id="bolsilloModalAddress">
                               <label for class="fs-6 mt-3">
                                 <span class="datosGenerales">Provincia</span>
                               </label>
-                              <input type="text" disabled class="form-control form-control-sm mt-1"
-                                id="bolsilloModalCity2">
+                              <input type="text" disabled class="form-control form-control-sm mt-1" id="bolsilloModalCity2">
                               <label for class="fs-6 mt-3">
                                 <span class="datosGenerales">Municipio</span>
                               </label>
-                              <input type="text" disabled class="form-control form-control-sm mt-1"
-                                id="bolsilloModalCity">
+                              <input type="text" disabled class="form-control form-control-sm mt-1" id="bolsilloModalCity">
                               <label for class="fs-6 mt-3">
                                 <span class="datosGenerales">Codigo Postal</span>
                               </label>
-                              <input type="text" disabled class="form-control form-control-sm mt-1 mb-3"
-                                id="bolsilloModalCp">
+                              <input type="text" disabled class="form-control form-control-sm mt-1 mb-3" id="bolsilloModalCp">
                             </div>
                           </div>
                         </div>
@@ -235,8 +134,7 @@
                     <!-- FIN MODAL -->
 
                     <div class="tab-content" id="myTabContent">
-                      <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel"
-                        aria-labelledby="home-tab" tabindex="0">
+                      <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
 
                         <!-- primer contenido BOLSILLO -->
                         <div class="container-fluid g-1 mt-3">
@@ -248,24 +146,21 @@
                                 <div class="card-body p-2">
                                   <div class="row g-1 mb-1" id="tour_boxes">
                                     <div class="col-12 col-md-4">
-                                      <div id="summary1"
-                                        class="infoBox summary mt-1 pt-2 rounded-1 bg-warning bg-gradient shadow-sm">
+                                      <div id="summary1" class="infoBox summary mt-1 pt-2 rounded-1 bg-warning bg-gradient shadow-sm">
                                         <span class="tituloCUadradosBolsillo">Codigo Amigo</span>
                                         <hr>
                                         <h3 class="infoBox infoData p-1"><strong class="codigoAmigo">--------</strong></h3>
                                       </div>
                                     </div>
                                     <div class="col">
-                                      <div id="summary4"
-                                        class="infoBox summary mt-1 pt-2 rounded-1 bg-dark bg-gradient shadow-sm">
+                                      <div id="summary4" class="infoBox summary mt-1 pt-2 rounded-1 bg-dark bg-gradient shadow-sm">
                                         <span class="tituloCUadradosBolsillo">Total Excedentes</span>
                                         <hr>
                                         <h3 class="infoBox infoData p-1">150€</h3>
                                       </div>
                                     </div>
                                     <div class="col">
-                                      <div id="summary2"
-                                        class="infoBox summary mt-1 pt-2 rounded-1 bg-dark bg-gradient shadow-sm">
+                                      <div id="summary2" class="infoBox summary mt-1 pt-2 rounded-1 bg-dark bg-gradient shadow-sm">
                                         <span class="tituloCUadradosBolsillo">Ahorro Anual</span>
                                         <hr>
                                         <h3 class="infoBox infoData p-1">30%</h3>
@@ -277,8 +172,7 @@
 
                                   <!-- DISPARADOR MODAL-BOLSILLO -->
                                   <div class="table-responsive">
-                                    <button type="button" class="btn btn-outline-light m-0 p-0 tour_chart"
-                                      data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    <button type="button" class="btn btn-outline-light m-0 p-0 tour_chart" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                       <canvas class="graficaBolsillo m-0 p-0" id="myChartBolsillo"></canvas>
                                     </button>
                                   </div>
@@ -288,14 +182,12 @@
 
 
                             <!-- CONTENT MODAL CHART-BOLSILLO  -->
-                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                              aria-hidden="true">
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                               <div class="modal-dialog modal-lg">
                                 <div class="modal-content">
                                   <div class="modal-header">
                                     <h1 class="modal-title fs-5" id="exampleModalLabel">Grafica de Bolsillo Solar</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                      aria-label="Close"></button>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                   </div>
                                   <div class="modal-body">
                                     <canvas id="myChartBolsilloModal" class="myChartBolsilloModal"></canvas>
@@ -349,8 +241,7 @@
                       </div>
 
 
-                      <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab"
-                        tabindex="0">
+                      <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
                         <!-- segundo contenido EXCEDENTES -->
                         <div class="container-fluid g-1 mt-3">
                           <div class="row g-1">
@@ -360,24 +251,21 @@
                                 <div class="card-body p-1 p-lg-2">
                                   <div class="row g-1 mb-1">
                                     <div class="col-12 col-md-4">
-                                      <div id="summary1"
-                                        class="infoBox summary mt-1 pt-2 rounded-1 bg-warning bg-gradient shadow-sm">
+                                      <div id="summary1" class="infoBox summary mt-1 pt-2 rounded-1 bg-warning bg-gradient shadow-sm">
                                         Codigo Amigo
                                         <hr>
                                         <h3 class="infoBox infoData p-1"><strong class="codigoAmigo">--------</strong></h3>
                                       </div>
                                     </div>
                                     <div class="col">
-                                      <div id="summary4"
-                                        class="infoBox summary mt-1 pt-2 rounded-1 bg-dark bg-gradient shadow-sm">
+                                      <div id="summary4" class="infoBox summary mt-1 pt-2 rounded-1 bg-dark bg-gradient shadow-sm">
                                         Total Excedentes
                                         <hr>
                                         <h3 class="infoBox infoData p-1">150€</h3>
                                       </div>
                                     </div>
                                     <div class="col">
-                                      <div id="summary2"
-                                        class="infoBox summary mt-1 pt-2 rounded-1 bg-dark bg-gradient shadow-sm">
+                                      <div id="summary2" class="infoBox summary mt-1 pt-2 rounded-1 bg-dark bg-gradient shadow-sm">
                                         <span class="infoBoxEP">Excedentes Producidos</span>
                                         <hr>
                                         <h3 class="infoBox infoData p-1">175 kWh</h3>
@@ -388,8 +276,7 @@
                                   <hr>
                                   <!-- DISPARADOR MODAL-EXCEDENTES -->
                                   <div class="table-responsive">
-                                    <button type="button" class="btn btn-outline-light m-0 p-0" data-bs-toggle="modal"
-                                      data-bs-target="#exampleModal2">
+                                    <button type="button" class="btn btn-outline-light m-0 p-0" data-bs-toggle="modal" data-bs-target="#exampleModal2">
                                       <canvas id="myChartExcedentes" class="graficaBolsillo m-0 p-0"></canvas>
                                     </button>
                                   </div>
@@ -398,14 +285,12 @@
                             </div>
 
                             <!-- CONTENT MODAL CHART-EXCEDENTES  -->
-                            <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
-                              aria-hidden="true">
+                            <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                               <div class="modal-dialog modal-lg">
                                 <div class="modal-content">
                                   <div class="modal-header">
                                     <h1 class="modal-title fs-5" id="exampleModalLabel">Grafica de Excedentes</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                      aria-label="Close"></button>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                   </div>
                                   <div class="modal-body">
                                     <canvas id="myChartExcedentesModal" class="myChartBolsilloModal"></canvas>
@@ -461,13 +346,10 @@
           </div>
 
           <!-- import jquery -->
-          <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+          <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
           <!-- import bootstrap 5.3.2 -->
-          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-            crossorigin="anonymous"></script>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
           <!-- import chartjs -->
           <script src="./js/chart/bolsilloChart.js"></script>
