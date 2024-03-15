@@ -67,7 +67,7 @@ $('document').ready(function () {
 			// uso index para poder concatenar y acceder a invoices_ext o cualquier otra collection
 			$.each(contracts, function () {
 				$dropdown.append($("<option>", { // uso el método concat para unir las cadenas con un guion
-					text: this.cups.code + " - "+ this.codecom + " - " + this.client.address + " - " + this.client.city + " - " + this.client.city2,
+					text: this.cups.code + " - "+ this.codecom + " - " + this.cups.address + " - " + this.cups.city + " - " + this.cups.city2,
 					value: this.cups.code + "@" + this.codecom + "@" + this.client.code
 				}));
 			});
@@ -111,10 +111,10 @@ $('document').ready(function () {
 		$.each(contracts, function () {
 			$brand_addressTable.text(this.codecom);
 			$cups_addressTable.text(this.cups.code);
-			$address_addressTable.text(this.client.address);
-			$location1_addressTable.text(this.client.city2);
-			$location2_addressTable.text(this.client.city);
-			$cp_addressTable.text(this.client.pcode);
+			$address_addressTable.text(this.cups.address);
+			$location1_addressTable.text(this.cups.city2);
+			$location2_addressTable.text(this.cups.city);
+			$cp_addressTable.text(this.cups.pcode);
 		})
 	}
 

@@ -15,7 +15,7 @@ $(function () {
 		// datos del select principal
 		$.each(contracts, function () {
 			$bolsilloSelect.append($('<option>', {
-				text: this.cups.code + " - " + this.client.address + "  " + this.client.city + ", " + this.client.city2,
+				text: this.cups.code + " - " + this.codecom + " - " + this.client.address + "  " + this.client.city + ", " + this.client.city2,
 				value: this.cups.code
 			}));
 
@@ -49,11 +49,6 @@ $(function () {
 
 			// datos del select principal
 			$.each(contracts, function () {
-				$bolsilloSelect.append($('<option>', {
-					text: this.cups.code + " - " + this.client.address + "  " + this.client.city + ", " + this.client.city2,
-					value: this.cups.code
-				}));
-
 				$codigoAmigo.text(codigoAmigo);
 
 

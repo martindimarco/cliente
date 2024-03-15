@@ -60,20 +60,20 @@ $comodin = $partesAmigables[0];
               <a class="btAccountBurguer menuBurgerTexto" href="#" target="_self">
                 <spam class="tamañoBotonesBurgerNav" id="tuto" onclick="iniciarTour()">Tutorial</spam>
               </a>
-              <a class="btAccountBurguer menuBurgerTexto" href="facturas.html" target="_self">
+              <a class="btAccountBurguer menuBurgerTexto" href="facturas.php" target="_self">
                 <spam class="tamañoBotonesBurgerNav" id="facturas">Mis Facturas</spam>
               </a>
-              <a class="btAccountBurguer menuBurgerTexto" href="user.html" target="_self">
+              <a class="btAccountBurguer menuBurgerTexto" href="user.php" target="_self">
                 <spam class="tamañoBotonesBurgerNav" id="datos">Mis Contratos</spam>
               </a>
-              <a class="btAccountBurguer menuBurgerTexto" href="bolsillo.html" target="_self">
+              <a class="btAccountBurguer menuBurgerTexto" href="bolsillo.php" target="_self">
                 <spam class="tamañoBotonesBurgerNav" id="bolsillo ">Bolsillo Solar</spam>
               </a>
               <a class="btAccountBurguer menuBurgerTexto" href="./assets/pdf/manual.pdf" target="_blank">
                 <spam class="tamañoBotonesBurgerNav" id="manual">Documentacion</spam>
               </a>
               <hr class="mt-3" style="border-color: white;">
-              <a class="btExitBurguer menuBurgerTexto" href="login.html" target="_self">
+              <a class="btExitBurguer menuBurgerTexto" href="index.html" target="_self">
                 <spam class="tamañoBotonesBurgerNav">Salir</spam>
               </a>
             </div>

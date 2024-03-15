@@ -1,3 +1,4 @@
+<!-- controlador para la destruccion de las sesiones -->
 <?php
 session_start();
 
@@ -8,7 +9,3 @@ if (isset($_SESSION['usu'])) {
   session_destroy();
   header("Location: ../index.html");
 }
-
-
-
-?>

@@ -1,3 +1,4 @@
+// mensajes de error en cada supuesto en el login
 $(document).ready(function () { // uppercase para usuario
 	$('#usu').change('input', function () {
 		var $usu = $(this).val();
@@ -23,7 +24,6 @@ $(document).ready(function () { // uppercase para usuario
 			success: function (msg) {
 				$msgFromLogin = JSON.parse(msg);
 
-				// PENDIENTE DE REVISAR CUANDO LOS CAMPOS ESTEN VACIOS. 
 				if ($usuLogin == "") {
 					$('#usu').attr('placeholder', 'No puede estar vacio').addClass('errorLogin');
 				}
@@ -31,8 +31,9 @@ $(document).ready(function () { // uppercase para usuario
 					$('#pass').attr('placeholder', 'No puede estar vacio').addClass('errorLogin');
 				}
 
+				// si OK redirige al controlador --> facturas.php
 				if ($msgFromLogin == 'OK') {
-					$(location).attr('href', './facturas.html');
+					$(location).attr('href', './facturas.php');
 				} else {
 					if ($msgFromLogin == 'KO_nif') {
 						$('#usu').val('Usuario incorrecto').addClass('errorLogin');

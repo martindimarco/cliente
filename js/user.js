@@ -14,7 +14,7 @@ $(function () {
 		// datos del select principal
 		$.each(contracts, function () {
 			$dropdown.append($('<option>', {
-				text: this.cups.code + " - " + this.client.address + "  " + this.client.city + ", " + this.client.city2,
+				text: this.cups.code + " - " + this.codecom +" - " + this.client.address + "  " + this.client.city + ", " + this.client.city2,
 				value: this.cups.code
 			}));
 		});
